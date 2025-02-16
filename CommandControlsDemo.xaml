@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI_Controls.CommandControlsDemo"
+             Title="CommandControlsDemo">
+    <VerticalStackLayout>
+        
+        <Button Text="Click"
+                x:Name="btnSaved"
+                Clicked="btnSave_Clicked"/>
+
+        <ImageButton Source="dotnet_bot.svg"
+                     Clicked="btnSave_Clicked"/>
+
+        <RadioButton Content="Opzione 1"
+                     CheckedChanged="RadioBtn_CheckedChanged"
+                     GroupName="FirstGroup"/>
+        <RadioButton Content="Opzione 2"
+                     CheckedChanged="RadioBtn_CheckedChanged"
+                     GroupName="FirstGroup"/>
+        <RadioButton Content="Opzione 3"
+                     CheckedChanged="RadioBtn_CheckedChanged"
+                     GroupName="SecondGroup"/>
+        <RadioButton Content="Opzione 4"
+                     CheckedChanged="RadioBtn_CheckedChanged"
+                     GroupName="SecondGroup"/>
+
+        <SearchBar x:Name="searchControl" SearchButtonPressed="searchControl_SearchButtonPressed"/>
+
+        <SwipeView Margin="0, 20, 0,0 ">
+            <SwipeView.LeftItems>
+                <SwipeItems>
+                    <SwipeItem IconImageSource="dotnet_bot.svg" Invoked="SwipeItemSave_Invoked" Text="Salva" BackgroundColor="Green" />
+                    <SwipeItem IconImageSource="dotnet_bot.svg" Invoked="SwipeItemDiscard_Invoked" Text="Annulla" BackgroundColor="Red"/>
+                </SwipeItems>
+            </SwipeView.LeftItems>
+            <Grid BackgroundColor="LightGray"
+                  HeightRequest="60"
+                  WidthRequest="300">
+                <Label Text="Scorri" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Grid>
+        </SwipeView>
+    </VerticalStackLayout>
+</ContentPage>
