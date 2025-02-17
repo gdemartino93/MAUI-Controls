@@ -1,4 +1,6 @@
-﻿namespace MAUI_Controls
+﻿using MAUI_Controls.CollectionsControls;
+
+namespace MAUI_Controls
 {
     public partial class App : Application
     {
@@ -6,7 +8,7 @@
         {
             InitializeComponent();
 
-            MainPage = new ActivityControlsDemo();
+            MainPage = new TableViewDemo();
         }
     }
 }

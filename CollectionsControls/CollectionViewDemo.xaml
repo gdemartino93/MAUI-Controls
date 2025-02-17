@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI_Controls.CollectionsControls.CollectionViewDemo"
+             Title="CollectionViewDemo">
+    <CollectionView SelectionMode="Multiple">
+        <CollectionView.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>Luca</x:String>
+                <x:String>Marco</x:String>
+                <x:String>Giovanni</x:String>
+                <x:String>Antonio</x:String>
+                <x:String>Sara</x:String>
+                <x:String>Mara</x:String>
+                <x:String>Carl</x:String>
+                <x:String>Carla</x:String>
+                <x:String>Gianluca</x:String>
+                <x:String>Marcantonio</x:String>
+                <x:String>Daniele</x:String>
+                <x:String>Gianni</x:String>
+            </x:Array>
+        </CollectionView.ItemsSource>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout>
+                    <Frame Margin="20"
+                           BackgroundColor="Grey"
+                           HasShadow="true"
+                           HeightRequest="100">
+                        <Label Text="{Binding .}" />
+                    </Frame>
+                </StackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>

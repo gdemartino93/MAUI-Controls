@@ -2,9 +2,9 @@ using System.Diagnostics;
 
 namespace MAUI_Controls;
 
-public partial class TextControlsDemo : ContentPage
+public partial class CollectionsControlsDemo : ContentPage
 {
-	public TextControlsDemo()
+	public CollectionsControlsDemo()
 	{
 		InitializeComponent();
 	}

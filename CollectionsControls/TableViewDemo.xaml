@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI_Controls.CollectionsControls.TableViewDemo"
+             Title="TableViewDemo">
+    <VerticalStackLayout>
+        <TableView Intent="Settings">
+            <TableRoot>
+                <TableSection Title="Prima sezione">
+                    <TextCell Detail="Text cell detail"
+                              Text="text cell" />
+
+                    <EntryCell Label="entry cell label" 
+                               Text="entry cell" />
+
+                    <SwitchCell Text="switch cell text"/>
+
+                    <ImageCell ImageSource="dotnet_bot.svg"
+                               Text="img text"
+                               Detail="img detail"/>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </VerticalStackLayout>
+</ContentPage>

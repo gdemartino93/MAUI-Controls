@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUI_Controls.CollectionsControls.ListViewDemo"
+             Title="ListViewDemo">
+    <VerticalStackLayout>
+        <ListView HasUnevenRows="True">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Marco</x:String>
+                    <x:String>Luca</x:String>
+                    <x:String>Antonio</x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Frame Margin="20"
+                                   BorderColor="Grey"
+                                   CornerRadius="5"
+                                   HasShadow="True"
+                                   HeightRequest="100"
+                                   HorizontalOptions="Center">
+                                <Label Text="{Binding .}"/>
+
+                            </Frame>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            
+        </ListView>
+    </VerticalStackLayout>
+</ContentPage>
